@@ -128,3 +128,4 @@ with variables from its surrounding environment.
 
 <div align="right">
     <img src="images/life.png" alt="Life is pushing a boulder up a mountain." width="200" height="150" float="left" border="3" />
+</div>
