@@ -51,7 +51,7 @@ class B,G,I decisionNode;
 
 The core algorithm follows these steps:
 
-1.  **Initialize the Program**: The `main` function starts the application by calling `run_app`, which contains the main logic. The program prints a welcoming header to the user.
+1.  **Initialize the Program**: The `main` function starts the application by calling the`run_app`function, which contains the main logic. The program prints a welcoming header to the user.
 
 2.  **Get the Conversion Unit**: The program prompts the user to enter `C` to convert to Fahrenheit or `F` to convert to Celsius.
 
@@ -80,19 +80,6 @@ The core algorithm follows these steps:
 6.  **Display the Result**: After the calculation, the program formats the output to show the original temperature, the conversion formula used, and the final converted temperature. It uses specific formatting to display integers without decimal places.
 
 7.  **End the Program**: The `run_app` function finishes, and the `main` function prints a `"Program finished normally"` message before the application closes.
-
-**Key Concepts in the Code**:
-     
-+ **Enums for Clarity**: The `TemperatureUnit` enum clearly defines the two possible units, preventing errors from using plain strings. The `AppExitStatus` enum handles different ways the program can end.
-
-+ **Structs for Data**: The `Temperature` struct encapsulates a value and its unit, ensuring this data is always handled together. This is a good example of object-oriented principles in Rust.
-
-+ **Error Handling**: The `?` operator is used extensively to propagate errors up the call stack to the caller, i.e., the `main` function which handles the different program exit scenarios qracefully using pattern matching.
-
-+ **Closure**: The `quit_prompt` closure eliminates code duplication when interacting 
-with variables from its surrounding environment.
-
-+ **Modularity**: The code is well-organized into separate functions for specific tasks like reading sanitized input (`read_sanitized_line`), getting user input with validation (`get_user_input`), and formatting the final output (`format_conversion_output`). This makes the code easier to read, test, and maintain.
 
 **Key Functions**:
 
@@ -125,3 +112,17 @@ with variables from its surrounding environment.
 + **`to_fahrenheit()` (method of `Temperature`)**: This method is responsible for performing the conversion from Celsius to Fahrenheit using the formula $`(C \times \frac{5}{9}) + 32`$.
 
 + **`convert_to()` (method of `Temperature`)**: This method acts as a public interface for conversion. It takes a target `TemperatureUnit` and calls the appropriate internal conversion method (`to_celcius` or `to_fahrenheit`) based on a match statement. If the target unit is the same as the original, it returns a clone of the original temperature.
+
+**Key Concepts in the Code**:
+     
++ **Enums for Clarity**: The `TemperatureUnit` enum clearly defines the two possible units, preventing errors from using plain strings. The `AppExitStatus` enum handles different ways the program can end.
+
++ **Structs for Data**: The `Temperature` struct encapsulates a value and its unit, ensuring this data is always handled together. This is a good example of object-oriented principles in Rust.
+
++ **Error Handling**: The `?` operator is used extensively to propagate errors up the call stack to the caller, i.e., the `main` function which handles the different program exit scenarios qracefully using pattern matching.
+
++ **Closure**: The `quit_prompt` closure eliminates code duplication when interacting 
+with variables from its surrounding environment.
+
++ **Modularity**: The code is well-organized into separate functions for specific tasks like reading sanitized input (`read_sanitized_line`), getting user input with validation (`get_user_input`), and formatting the final output (`format_conversion_output`). This makes the code easier to read, test, and maintain.
+
