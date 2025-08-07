@@ -113,6 +113,17 @@ The core algorithm follows these steps:
 
 + **`convert_to()` (method of `Temperature`)**: This method acts as a public interface for conversion. It takes a target `TemperatureUnit` and calls the appropriate internal conversion method (`to_celcius` or `to_fahrenheit`) based on a match statement. If the target unit is the same as the original, it returns a clone of the original temperature.
 
+## Usage
+
+```bash
+From the root directory of the application:
+# Compile the program
+cargo build
+
+# Run the program
+cargo run
+```
+
 **Key Concepts in the Code**:
      
 + **Enums for Clarity**: The `TemperatureUnit` enum clearly defines the two possible units, preventing errors from using plain strings. The `AppExitStatus` enum handles different ways the program can end.
