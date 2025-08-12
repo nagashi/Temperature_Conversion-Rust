@@ -139,4 +139,4 @@ with variables from its surrounding environment.
 
 <div align="right"><br>
     <img src="images/life.png" alt="Life is pushing a boulder up a mountain." width="150" height="100" float="left" border="1.75" />
-</div>
+</div> 
