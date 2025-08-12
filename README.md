@@ -137,6 +137,6 @@ with variables from its surrounding environment.
 
 + **Modularity**: The code is well-organized into separate functions for specific tasks like reading sanitized input (`read_sanitized_line`), getting user input with validation (`get_user_input`), and formatting the final output (`format_conversion_output`). This makes the code easier to read, test, and maintain.
 
-<div align="right">
-    <img src="images/life.png" alt="Life is pushing a boulder up a mountain." width="200" height="150" float="left" border="3" />
+<div align="right"><br>
+    <img src="images/life.png" alt="Life is pushing a boulder up a mountain." width="150" height="100" float="left" border="1.75" />
 </div>
